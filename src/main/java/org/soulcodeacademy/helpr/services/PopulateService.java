@@ -68,6 +68,8 @@ public class PopulateService {
         Chamado ch1 = new Chamado(null, "Primeiro chamado do sistema", "Revisar as entidades criadas");
         ch1.setCliente(cl1);
 
+
+
         Chamado ch2 = new Chamado(null, "Ativar VPN do sistema", "Conectar aos servidores remotos");
         ch2.setCliente(cl2);
         ch2.setFuncionario(f1);
@@ -82,6 +84,7 @@ public class PopulateService {
         ch4.setFuncionario(f3);
         ch4.setStatus(StatusChamado.CONCLUIDO);
         ch4.setDataFechamento(LocalDate.now());
+        ch4.setStatus(StatusChamado.ARQUIVADO);
 
 
         Chamado ch5 = new Chamado(null, "Clientes sem nenhum acesso", "Os clientes estão sem acesso nenhum.");
