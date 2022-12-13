@@ -16,4 +16,7 @@ public enum Perfil { // enum class
     public String getDescricao() {
         return descricao;
     }
+
+
+
 }

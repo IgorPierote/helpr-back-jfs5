@@ -39,7 +39,7 @@ public class ChamadoService {
         // Verificar se existe um cliente com este ID
         Cliente cliente = this.clienteService.getCliente(dto.getIdCliente());
         Chamado chamado = new Chamado(null, dto.getTitulo(), dto.getDescricao());
-        chamado.setCliente(cliente); // associa o cliente ao chamado
+        chamado.setCliente(cliente); // associa o cliente ao chamad
 
         return this.chamadoRepository.save(chamado);
     }
@@ -71,6 +71,13 @@ public class ChamadoService {
                     chamadoAtual.setStatus(StatusChamado.CONCLUIDO);
                     chamadoAtual.setFuncionario(funcionario);
                     chamadoAtual.setDataFechamento(LocalDate.now());
+                }
+                case ARQUIVADO -> {
+                    chamadoAtual.setStatus(StatusChamado.ARQUIVADO);
+
+
+
+
                 }
             }
         }
